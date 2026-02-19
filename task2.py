@@ -44,43 +44,42 @@ print(""
 # --- Candy Bars ---
 # Price: $1.89 each (float price, int quantity)
 candy_price = 1.89
-candy_quantity = candy_quantity_str
+candy_quantity = int(candy_quantity_str)  # CONVERT TO INT
 candy_total = candy_price * candy_quantity
-print(f"Candy Bars: {candy_quantity} x ${candy_price} = ${candy_total}")
+print(f"Candy Bars: {candy_quantity} x ${candy_price} = ${candy_total:.2f}")
 
 # --- Soda Bottles ---
 # Price: $2.49 each (float price, int quantity)
 soda_price = 2.49
-soda_quantity = soda_quantity_str
+soda_quantity = int(soda_quantity_str)  # CONVERT TO INT
 soda_total = soda_price * soda_quantity
-print(f"Soda: {soda_quantity} x ${soda_price} = ${soda_total}")
+print(f"Soda: {soda_quantity} x ${soda_price} = ${soda_total:.2f}")
 
 # --- Gas ---
 # Price: $3.25 per gallon (float price, float quantity)
 gas_price = 3.25
-gallons = gallons_str
+gallons = float(gallons_str)  # CONVERT TO FLOAT
 gas_total = gas_price * gallons
-print(f"Gas: {gallons} gallons x ${gas_price} = ${gas_total}")
+print(f"Gas: {gallons} gallons x ${gas_price} = ${gas_total:.2f}")
 
 # --- Deli Meat ---
 # Price: $8.99 per pound (float price, float quantity)
 deli_price = 8.99
-pounds = pounds_str
+pounds = float(pounds_str)  # CONVERT TO FLOAT
 deli_total = deli_price * pounds
-print(f"Deli Meat: {pounds} lbs x ${deli_price} = ${deli_total}")
+print(f"Deli Meat: {pounds} lbs x ${deli_price} = ${deli_total:.2f}")
 
 # --- Lottery Tickets ---
 # Price: $2 each (int price, int quantity)
 lottery_price = 2
-lottery_quantity = lottery_quantity_str
+lottery_quantity = int(lottery_quantity_str)  # CONVERT TO INT
 lottery_total = lottery_price * lottery_quantity
-print(f"Lottery: {lottery_quantity} x ${lottery_price} = ${lottery_total}")
-
+print(f"Lottery: {lottery_quantity} x ${lottery_price} = ${lottery_total:.2f}")
 # --- Receipt Total ---
 receipt_total = candy_total + soda_total + gas_total + deli_total + lottery_total
 print(f"""
 ========================================
-TOTAL: ${receipt_total}
+TOTAL: ${receipt_total:.2f}
 ========================================
 Thank you! Come again!
 """)
